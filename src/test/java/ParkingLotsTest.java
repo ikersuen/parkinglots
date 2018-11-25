@@ -249,6 +249,29 @@ public class ParkingLotsTest {
         //Then
         assertSame(myCar, parkingLot2.findCarInParkingLot(myCar));
         assertNull(parkingLot1.findCarInParkingLot(myCar));
+    }
 
+    //Story6 AC1
+    @Test
+    void should_manager_add_parking_boys_to_management_list(){
+        //Given
+        ParkingBoy parkingBoy1 = new ParkingBoy();
+        SmartParkingBoy parkingBoy2 = new SmartParkingBoy();
+        SuperParkingBoy parkingBoy3 = new SuperParkingBoy();
+        ParkingManager manager = new ParkingManager();
+        ParkingBoy parkingBoy4 = new ParkingBoy();
+
+        //When
+        manager.setManagementList(parkingBoy1);
+        manager.setManagementList(parkingBoy2);
+        manager.setManagementList(parkingBoy3);
+        manager.setManagementList(manager);
+
+        //Then
+        assertSame(parkingBoy1, manager.findParkingBoyInManagementList(parkingBoy1));
+        assertSame(parkingBoy2, manager.findParkingBoyInManagementList(parkingBoy2));
+        assertSame(parkingBoy3, manager.findParkingBoyInManagementList(parkingBoy3));
+        assertSame(manager, manager.findParkingBoyInManagementList(manager));
+        assertNull(manager.findParkingBoyInManagementList(parkingBoy4));
     }
 }
