@@ -1,15 +1,21 @@
 public class ParkingBoy {
 
     private String lastErrorMessage;
+    private ParkingLot parkingLot;
 
     public ParkingBoy(ParkingLot parkingLot){
-
+        this.parkingLot = parkingLot;
     }
 
     public ParkingTicket park(Car car){
         ParkingTicket parkingTicket = new ParkingTicket(car);
-        this.lastErrorMessage = null;
-        return parkingTicket;
+        if(this.parkingLot.park(car)){
+            this.lastErrorMessage = null;
+            return parkingTicket;
+        }else {
+            this.lastErrorMessage = "The parking lot is full.";
+            return null;
+        }
     }
 
     public Car fetch(ParkingTicket parkingTicket){
