@@ -17,6 +17,10 @@ public class ParkingManager extends ParkingBoy {
         managementList.add(parkingBoy);
     }
 
+    public ParkingTicket useParkingBoy (ParkingBoy parkingBoy, Car car){
+        return parkingBoy.park(car);
+    }
+
     public ParkingBoy findParkingBoyInManagementList(ParkingBoy parkingBoy){
         int index = this.managementList.indexOf(parkingBoy);
         if (index >= 0) {
