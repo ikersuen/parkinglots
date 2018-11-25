@@ -35,4 +35,32 @@ public class ParkingLotsTest {
         assertSame(car2, fetchedCar2Ticket);
     }
 
+    //Story1 AC3
+    @Test
+    void should_not_fetch_any_car_once_ticket_is_wrong() {
+        //Given
+        ParkingLot parkingLot = new ParkingLot();
+        ParkingBoy parkingBoy = new ParkingBoy(parkingLot);
+        Car car = new Car();
+        ParkingTicket wrongTicket = new ParkingTicket();
+        //When
+        ParkingTicket ticket = parkingBoy.park(car);
+        //Then
+        assertNull(parkingBoy.fetch(wrongTicket));
+        assertSame(car, parkingBoy.fetch(ticket));
+    }
+
+    //Story1 AC3
+    @Test
+    void should_query_message_once_the_ticket_is_wrong() {
+        ParkingLot parkingLot = new ParkingLot();
+        ParkingBoy parkingBoy = new ParkingBoy(parkingLot);
+        ParkingTicket wrongTicket = new ParkingTicket();
+
+        parkingBoy.fetch(wrongTicket);
+        String message = parkingBoy.getLastErrorMessage();
+
+        assertEquals("Unrecognized parking ticket.", message);
+    }
+
 }

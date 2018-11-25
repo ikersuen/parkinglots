@@ -12,4 +12,5 @@ public class ParkingTicket {
     protected Car getCar() {
         return this.car;
     }
+
 }
