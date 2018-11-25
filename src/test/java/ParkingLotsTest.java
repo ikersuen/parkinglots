@@ -167,7 +167,28 @@ public class ParkingLotsTest {
         assertEquals("Not enough position.", parkingBoy.getLastErrorMessage());
     }
 
-    //Story4 AC1
+    //Story3
+    @Test
+    void should_parking_boy_park_sequentially(){
+        //Given
+        ParkingLot parkingLot1 = new ParkingLot(0);
+        ParkingLot parkingLot2 = new ParkingLot(20);
+        Car myCar = new Car();
+        ParkingLots parkingBoyParkingLots = new ParkingLots();
+        parkingBoyParkingLots.add(parkingLot1);
+        parkingBoyParkingLots.add(parkingLot2);
+        ParkingBoy parkingBoy = new ParkingBoy(parkingBoyParkingLots);
+
+        //When
+        parkingBoy.park(myCar);
+
+        //Then
+        assertSame(myCar, parkingLot2.findCarInParkingLot(myCar));
+        assertNull(parkingLot1.findCarInParkingLot(myCar));
+
+    }
+
+    //Story4
     @Test
     void should_smart_parking_boy_park_cars_to_more_empty_position_parking_lot() {
         //Given
