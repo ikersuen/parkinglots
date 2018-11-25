@@ -8,12 +8,16 @@ public class ParkingBoy {
     }
 
     public ParkingTicket park(Car car){
-        ParkingTicket parkingTicket = new ParkingTicket(car);
-        if(this.parkingLot.park(car)){
-            this.lastErrorMessage = null;
-            return parkingTicket;
-        }else {
-            this.lastErrorMessage = "Not enough position.";
+        ParkingTicket parkingTicket = new ParkingTicket(car, this.parkingLot);
+        if(this.parkingLot != null) {
+            if (this.parkingLot.park(car)) {
+                this.lastErrorMessage = null;
+                return parkingTicket;
+            } else {
+                this.lastErrorMessage = "Not enough position.";
+                return null;
+            }
+        }else{
             return null;
         }
     }
@@ -33,8 +37,10 @@ public class ParkingBoy {
             this.lastErrorMessage = "Unrecognized parking ticket.";
             return null;
         }
+
+        ParkingLot parkingLot = parkingTicket.getParkingLot();
         parkingTicket.setUsed(true);
-        return parkingTicket.getCar();
+        return parkingLot.fetch(parkingTicket.getCar());
     }
 
     public String getLastErrorMessage() {

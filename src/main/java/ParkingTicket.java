@@ -1,13 +1,16 @@
 public class ParkingTicket {
     private Car car;
     private boolean used;
+    private ParkingLot parkingLot;
 
     public ParkingTicket(){
 
     }
 
-    public ParkingTicket(Car car){
+    public ParkingTicket(Car car, ParkingLot parkingLot){
         this.car = car;
+        this.used = false;
+        this.parkingLot = parkingLot;
     }
 
     protected Car getCar() {
@@ -20,6 +23,10 @@ public class ParkingTicket {
 
     public void setUsed(boolean used) {
         this.used = used;
+    }
+
+    public ParkingLot getParkingLot() {
+        return parkingLot;
     }
 
 }
