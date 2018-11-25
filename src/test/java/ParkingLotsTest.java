@@ -1,4 +1,6 @@
 import org.junit.jupiter.api.Test;
+import sun.security.krb5.internal.Ticket;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -231,7 +233,7 @@ public class ParkingLotsTest {
         assertNull(parkingLot2.findCarInParkingLot(myCar1));
     }
 
-    //Story6 AC1
+    //Story6 AC2
     @Test
     void should_manager_act_as_a_standard_parking_boy(){
         //Given
@@ -293,9 +295,39 @@ public class ParkingLotsTest {
         //When
         manager.setManagementList(parkingBoy1);
         manager.setManagementList(parkingBoy2);
-        ParkingTicket ticket = manager.useParkingBoy(parkingBoy1, myCar);
+        ParkingTicket ticket = manager.useParkingBoyToPark(parkingBoy1, myCar);
 
         //Then
-        assertSame(myCar, parkingBoy1.fetch(ticket));
+        assertSame(myCar, parkingLot2.findCarInParkingLot(myCar));
+        assertSame(myCar, manager.useParkingBoyToFetch(parkingBoy1, ticket));
     }
+
+    //Story6 AC1
+    @Test
+    void should_manager_specify_a_parking_boy_to_test(){
+        //Given
+        ParkingLot parkingLot = new ParkingLot();
+        ParkingManager manager = new ParkingManager();
+        ParkingBoy parkingBoy = new ParkingBoy(parkingLot);
+        Car myCar = new Car();
+        //When
+        manager.setManagementList(parkingBoy);
+        ParkingTicket ticket = manager.useParkingBoyToPark(parkingBoy, myCar);
+        Car car = manager.useParkingBoyToFetch(parkingBoy, null);
+        //Then
+        assertEquals(
+                "Please provide your parking ticket.",
+                parkingBoy.getLastErrorMessage());
+        assertEquals(
+                manager.getLastErrorMessage(),
+                parkingBoy.getLastErrorMessage());
+        assertNull(car);
+        Car realCar = manager.useParkingBoyToFetch(parkingBoy, ticket);
+        assertSame(myCar, realCar);
+        assertEquals(
+                manager.getLastErrorMessage(),
+                parkingBoy.getLastErrorMessage());
+
+    }
+
 }
