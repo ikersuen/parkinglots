@@ -15,12 +15,21 @@ public class ParkingLot {
         this.cars = new ArrayList<>();
     }
 
+    public Car findCarInParkingLot(Car car){
+        int index = this.cars.indexOf(car);
+        if (index >= 0) {
+            return this.cars.get(index);
+        }else{
+            return null;
+        }
+    }
+
     public int getCapacity() {
         return capacity;
     }
 
-    public int getAvailableParkingPosition() {
-        return count - capacity;
+    public int getTotalVacancy() {
+        return capacity - count;
     }
 
     public boolean park(Car car) {

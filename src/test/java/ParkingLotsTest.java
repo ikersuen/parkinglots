@@ -1,4 +1,6 @@
 import org.junit.jupiter.api.Test;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -165,6 +167,23 @@ public class ParkingLotsTest {
         assertEquals("Not enough position.", parkingBoy.getLastErrorMessage());
     }
 
-    //Story2 AC1
+    //Story4 AC1
+    @Test
+    void should_smart_parking_boy_park_cars_to_more_empty_position_parking_lot() {
+        //Given
+        ParkingLot parkingLot1 = new ParkingLot(10);
+        ParkingLot parkingLot2 = new ParkingLot(20);
+        Car myCar = new Car();
+        ParkingLots smartParkingBoyParkingLots = new ParkingLots();
+        smartParkingBoyParkingLots.add(parkingLot1);
+        smartParkingBoyParkingLots.add(parkingLot2);
+        SmartParkingBoy smartParkingBoy = new SmartParkingBoy(smartParkingBoyParkingLots);
 
+        //When
+        smartParkingBoy.park(myCar);
+
+        //Then
+        assertSame(myCar, parkingLot2.findCarInParkingLot(myCar));
+        assertNull(parkingLot1.findCarInParkingLot(myCar));
+    }
 }
