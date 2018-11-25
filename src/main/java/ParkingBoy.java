@@ -22,6 +22,12 @@ public class ParkingBoy {
             this.lastErrorMessage = "Unrecognized parking ticket.";
             return null;
         }
+
+        if ( parkingTicket.isUsed()){
+            this.lastErrorMessage = "Unrecognized parking ticket.";
+            return null;
+        }
+        parkingTicket.setUsed(true);
         return parkingTicket.getCar();
     }
 

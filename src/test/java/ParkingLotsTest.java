@@ -107,4 +107,37 @@ public class ParkingLotsTest {
                 "Please provide your parking ticket.",
                 parkingBoy.getLastErrorMessage());
     }
+
+    //Story1 AC4
+    @Test
+    void should_not_fetch_any_car_once_ticket_has_been_used() {
+        //Given
+        ParkingLot parkingLot = new ParkingLot();
+        ParkingBoy parkingBoy = new ParkingBoy(parkingLot);
+        Car car = new Car();
+        //When
+        ParkingTicket ticket = parkingBoy.park(car);
+        parkingBoy.fetch(ticket);
+        //Then
+        assertNull(parkingBoy.fetch(ticket));
+    }
+
+    //Story1 AC4
+    @Test
+    void should_query_error_message_for_used_ticket() {
+        //Given
+        ParkingLot parkingLot = new ParkingLot();
+        ParkingBoy parkingBoy = new ParkingBoy(parkingLot);
+        Car car = new Car();
+        //When
+        ParkingTicket ticket = parkingBoy.park(car);
+        parkingBoy.fetch(ticket);
+        parkingBoy.fetch(ticket);
+        //Then
+        assertEquals(
+                "Unrecognized parking ticket.",
+                parkingBoy.getLastErrorMessage()
+        );
+    }
+
 }
