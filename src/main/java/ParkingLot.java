@@ -31,4 +31,16 @@ public class ParkingLot {
         this.count++;
         return true;
     }
+
+    public Car fetch(Car car) {
+        int index = this.cars.indexOf(car);
+        if (index >= 0 ){
+            Car carFetch = this.cars.remove(index);
+            this.count--;
+            return carFetch;
+        }else{
+            return null;
+        }
+
+    }
 }

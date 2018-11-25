@@ -13,7 +13,7 @@ public class ParkingBoy {
             this.lastErrorMessage = null;
             return parkingTicket;
         }else {
-            this.lastErrorMessage = "The parking lot is full.";
+            this.lastErrorMessage = "Not enough position.";
             return null;
         }
     }

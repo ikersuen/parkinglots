@@ -50,7 +50,7 @@ public class ParkingLotsTest {
         assertSame(car, parkingBoy.fetch(ticket));
     }
 
-    //Story1 AC3
+    //Story2 AC1
     @Test
     void should_query_message_once_the_ticket_is_wrong() {
         //Given
@@ -94,7 +94,7 @@ public class ParkingLotsTest {
         assertSame(car, parkingBoy.fetch(ticket));
     }
 
-    //Story1 AC3
+    //Story2 AC2
     @Test
     void should_query_message_once_ticket_is_not_provided() {
         //Given
@@ -122,7 +122,7 @@ public class ParkingLotsTest {
         assertNull(parkingBoy.fetch(ticket));
     }
 
-    //Story1 AC4
+    //Story2 AC1
     @Test
     void should_query_error_message_for_used_ticket() {
         //Given
@@ -152,7 +152,7 @@ public class ParkingLotsTest {
         assertNull(parkingBoy.park(new Car()));
     }
 
-    //Story1 AC5
+    //Story2 AC3
     @Test
     void should_get_message_if_there_is_not_enough_position() {
         final int capacity = 1;
@@ -162,7 +162,9 @@ public class ParkingLotsTest {
         parkingBoy.park(new Car());
         parkingBoy.park(new Car());
 
-        assertEquals("The parking lot is full.", parkingBoy.getLastErrorMessage());
+        assertEquals("Not enough position.", parkingBoy.getLastErrorMessage());
     }
+
+    //Story2 AC1
 
 }
