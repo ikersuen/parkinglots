@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cc95573-bcd0-49eb-8a43-0c9f2f8c896c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/SuperParkingBoy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ParkingManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ParkingBoy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParkingBoy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SmartParkingBoy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SmartParkingBoy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ParkingLotsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ParkingLotsTest.java" afterDir="false" />
     </list>
@@ -35,25 +35,25 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gradle" value="2" />
-          <entry key="java" value="14" />
+          <entry key="java" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Groovy" value="2" />
-          <entry key="JAVA" value="14" />
+          <entry key="JAVA" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="2" />
-          <entry key="java" value="3178" />
+          <entry key="java" value="3481" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="2" />
-          <entry key="JAVA" value="3178" />
+          <entry key="JAVA" value="3481" />
         </counts>
       </usages-collector>
     </session>
@@ -62,7 +62,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.37965617">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/ParkingTicket.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="323">
@@ -83,12 +83,14 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/ParkingBoy.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="368">
-                  <caret line="41" column="74" lean-forward="true" selection-start-line="41" selection-start-column="74" selection-end-line="41" selection-end-column="74" />
+                <state relative-caret-position="152">
+                  <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#303#304#0" expanded="true" />
                     <element signature="e#355#356#0" expanded="true" />
+                    <element signature="e#454#455#0" expanded="true" />
+                    <element signature="e#492#493#0" expanded="true" />
                     <element signature="e#1318#1319#0" expanded="true" />
                     <element signature="e#1357#1358#0" expanded="true" />
                   </folding>
@@ -96,7 +98,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/ParkingLot.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="134">
@@ -114,29 +116,15 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/SmartParkingBoy.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="5" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#166#167#0" expanded="true" />
-                    <element signature="e#218#219#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/java/ParkingLotsTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="569">
-                  <caret line="230" column="29" selection-start-line="230" selection-start-column="29" selection-end-line="230" selection-end-column="29" />
+                <state relative-caret-position="321">
+                  <caret line="237" selection-start-line="237" selection-end-line="237" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -144,14 +132,28 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/SuperParkingBoy.java">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/ParkingManager.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" selection-start-line="18" selection-end-line="18" />
+                <state relative-caret-position="68">
+                  <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
                   <folding>
-                    <element signature="e#109#110#0" expanded="true" />
-                    <element signature="e#160#161#0" expanded="true" />
+                    <element signature="e#105#106#0" expanded="true" />
+                    <element signature="e#139#140#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/SmartParkingBoy.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="72">
+                  <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="5" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#158#159#0" expanded="true" />
+                    <element signature="e#192#193#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -479,11 +481,12 @@
         <option value="$PROJECT_DIR$/src/main/java/Car.java" />
         <option value="$PROJECT_DIR$/src/main/java/ParkingTicket.java" />
         <option value="$PROJECT_DIR$/src/main/java/ParkingLots.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ParkingBoy.java" />
         <option value="$PROJECT_DIR$/src/main/java/ParkingLot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ParkingBoy.java" />
         <option value="$PROJECT_DIR$/src/main/java/SmartParkingBoy.java" />
         <option value="$PROJECT_DIR$/src/main/java/SuperParkingBoy.java" />
         <option value="$PROJECT_DIR$/src/test/java/ParkingLotsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ParkingManager.java" />
       </list>
     </option>
   </component>
@@ -545,7 +548,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543125864720" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543126999363" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
@@ -633,9 +636,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ParkingLotsTest_should_get_message_if_there_is_not_enough_position - 2018.11.25 at 13h 35m 13s.xml">
-      <configuration name="ParkingLotsTest.should_get_message_if_there_is_not_enough_position" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ParkingLotsTest_should_get_message_if_there_is_not_enough_position - 2018.11.25 at 13h 39m 13s.xml">
       <configuration name="ParkingLotsTest.should_get_message_if_there_is_not_enough_position" configurationId="JUnit" />
     </history-entry>
@@ -663,9 +663,13 @@
     <history-entry file="ParkingLotsTest_should_super_parking_boy_park_cars_to_more_empty_position_parking_lot - 2018.11.25 at 14h 03m 46s.xml">
       <configuration name="ParkingLotsTest.should_super_parking_boy_park_cars_to_more_empty_position_parking_lot" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ParkingLotsTest - 2018.11.25 at 14h 04m 13s.xml">
+      <configuration name="ParkingLotsTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15974212" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -677,7 +681,7 @@
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32934928" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32934928" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997344" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -729,86 +733,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/SuperParkingBoy.java</url>
-          <line>14</line>
-          <properties />
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/SuperParkingBoy.java</url>
-          <line>15</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/SuperParkingBoy.java</url>
-          <line>16</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/SuperParkingBoy.java</url>
-          <line>13</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/SuperParkingBoy.java</url>
-          <line>12</line>
-          <properties />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/SuperParkingBoy.java</url>
-          <line>17</line>
-          <properties />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/SuperParkingBoy.java</url>
-          <line>19</line>
-          <properties />
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/SuperParkingBoy.java</url>
-          <line>18</line>
-          <properties />
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/SuperParkingBoy.java</url>
-          <line>11</line>
-          <properties />
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/SuperParkingBoy.java</url>
-          <line>9</line>
-          <properties />
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/SuperParkingBoy.java</url>
-          <line>10</line>
-          <properties />
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/SuperParkingBoy.java</url>
-          <line>8</line>
-          <properties class="SuperParkingBoy" method="chooseParkingLot">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/ParkingLotsTests.java" />
@@ -862,32 +786,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ParkingBoy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="41" column="74" lean-forward="true" selection-start-line="41" selection-start-column="74" selection-end-line="41" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#303#304#0" expanded="true" />
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#1318#1319#0" expanded="true" />
-            <element signature="e#1357#1358#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SmartParkingBoy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#166#167#0" expanded="true" />
-            <element signature="e#218#219#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ParkingLot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -904,23 +802,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ParkingBoy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#303#304#0" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1357#1358#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/SuperParkingBoy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="187">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding>
             <element signature="e#109#110#0" expanded="true" />
-            <element signature="e#160#161#0" expanded="true" />
+            <element signature="e#143#144#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ParkingLotsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="230" column="29" selection-start-line="230" selection-start-column="29" selection-end-line="230" selection-end-column="29" />
+        <state relative-caret-position="321">
+          <caret line="237" selection-start-line="237" selection-end-line="237" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SmartParkingBoy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
+            <element signature="e#192#193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ParkingManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding>
+            <element signature="e#105#106#0" expanded="true" />
+            <element signature="e#139#140#0" expanded="true" />
           </folding>
         </state>
       </provider>

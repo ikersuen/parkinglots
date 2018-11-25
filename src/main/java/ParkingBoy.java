@@ -19,6 +19,10 @@ public class ParkingBoy {
         this.parkingLots = parkingLots;
     }
 
+    public ParkingLots getParkingLots(){
+        return this.parkingLots;
+    }
+
     public ParkingTicket park(Car car){
         ParkingLot chosenParkingLot = this.chooseParkingLot();
         ParkingTicket parkingTicket = new ParkingTicket(car, chosenParkingLot);

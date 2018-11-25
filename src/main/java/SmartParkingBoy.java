@@ -2,14 +2,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SmartParkingBoy extends ParkingBoy {
-    private ParkingLots parkingLotsOwned;
 
     public SmartParkingBoy(ParkingLots parkingLots){
-        this.parkingLotsOwned = parkingLots;
+        super(parkingLots);
     }
 
     @Override
     public ParkingLot chooseParkingLot() {
+        ParkingLots parkingLotsOwned = super.getParkingLots();
         if (parkingLotsOwned.getSize() == 0) {
             return null;
         }

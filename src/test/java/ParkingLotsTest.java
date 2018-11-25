@@ -230,4 +230,25 @@ public class ParkingLotsTest {
         assertNull(parkingLot1.findCarInParkingLot(myCar2));
         assertNull(parkingLot2.findCarInParkingLot(myCar1));
     }
+
+    //Story6 AC1
+    @Test
+    void should_manager_act_as_a_standard_parking_boy(){
+        //Given
+        ParkingLot parkingLot1 = new ParkingLot(0);
+        ParkingLot parkingLot2 = new ParkingLot(20);
+        Car myCar = new Car();
+        ParkingLots managerParkingLots = new ParkingLots();
+        managerParkingLots.add(parkingLot1);
+        managerParkingLots.add(parkingLot2);
+        ParkingManager manager = new ParkingManager(managerParkingLots);
+
+        //When
+        manager.park(myCar);
+
+        //Then
+        assertSame(myCar, parkingLot2.findCarInParkingLot(myCar));
+        assertNull(parkingLot1.findCarInParkingLot(myCar));
+
+    }
 }
