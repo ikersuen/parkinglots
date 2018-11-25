@@ -207,4 +207,27 @@ public class ParkingLotsTest {
         assertSame(myCar, parkingLot2.findCarInParkingLot(myCar));
         assertNull(parkingLot1.findCarInParkingLot(myCar));
     }
+
+    //Story4
+    @Test
+    void should_super_parking_boy_park_cars_to_more_empty_position_parking_lot() {
+        //Given
+        ParkingLot parkingLot1 = new ParkingLot(2);
+        ParkingLot parkingLot2 = new ParkingLot(20);
+        Car myCar1 = new Car();
+        Car myCar2 = new Car();
+        ParkingLots superParkingBoyParkingLots = new ParkingLots();
+        superParkingBoyParkingLots.add(parkingLot1);
+        superParkingBoyParkingLots.add(parkingLot2);
+        SuperParkingBoy superParkingBoy = new SuperParkingBoy(superParkingBoyParkingLots);
+        //When
+        superParkingBoy.park(myCar1);
+        superParkingBoy.park(myCar2);
+
+        //Then
+        assertSame(myCar1, parkingLot1.findCarInParkingLot(myCar1));
+        assertSame(myCar2, parkingLot2.findCarInParkingLot(myCar2));
+        assertNull(parkingLot1.findCarInParkingLot(myCar2));
+        assertNull(parkingLot2.findCarInParkingLot(myCar1));
+    }
 }

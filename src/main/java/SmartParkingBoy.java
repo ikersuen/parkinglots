@@ -3,7 +3,6 @@ import java.util.List;
 
 public class SmartParkingBoy extends ParkingBoy {
     private ParkingLots parkingLotsOwned;
-    private String lastErrorMessage;
 
     public SmartParkingBoy(ParkingLots parkingLots){
         this.parkingLotsOwned = parkingLots;
