@@ -10,7 +10,8 @@ public class ParkingBoy {
     public ParkingTicket park(Car car){
         ParkingTicket parkingTicket = new ParkingTicket(car, this.parkingLot);
         if(this.parkingLot != null) {
-            if (this.parkingLot.park(car)) {
+            boolean parkingLotCanParkCar = this.parkingLot.park(car);
+            if (parkingLotCanParkCar) {
                 this.lastErrorMessage = null;
                 return parkingTicket;
             } else {

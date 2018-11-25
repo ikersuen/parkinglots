@@ -26,7 +26,7 @@ public class ParkingTicket {
     }
 
     public ParkingLot getParkingLot() {
-        return parkingLot;
+        return this.parkingLot;
     }
 
 }
